@@ -2,6 +2,7 @@ package arquiteturaspring.montadora.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 import arquiteturaspring.montadora.Motor;
 import arquiteturaspring.montadora.TipoMotor;
@@ -10,6 +11,7 @@ import arquiteturaspring.montadora.TipoMotor;
 public class MontadoraConfiguration {
 
     @Bean(name = "motorAspirado")
+    @Primary
     public Motor motorAspirado() {
         var motor = new Motor();
         motor.setCavalos(120);
