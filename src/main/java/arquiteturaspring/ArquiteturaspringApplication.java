@@ -17,6 +17,9 @@ public class ArquiteturaspringApplication {
 		builder.bannerMode(Banner.Mode.OFF);
 		builder.profiles("producao", "homologacao");
 
+		// definindo a inicialização lazy para todos os beans da aplicação
+		builder.lazyInitialization(false);
+
 		builder.run(args);
 
 		// contexto da aplicação já iniciada:

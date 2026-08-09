@@ -1,6 +1,7 @@
 package arquiteturaspring;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -15,6 +16,8 @@ import arquiteturaspring.todos.TodoValidator;
 * @Scope("prototype") // Denota que o bean é gerenciado pelo Spring e terá escopo prototype
 * @Scope("application") // Denota que o bean é gerenciado pelo Spring e terá escopo application
 */
+
+@Lazy // definindo um componente como lazy, ou seja, a instância do bean só será criada quando for realmente necessário
 @Component
 @Scope("singleton")
 public class BeanGerenciado {
