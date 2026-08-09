@@ -13,5 +13,7 @@ spring:
 app:
   config:
     variavel: VARIAVEL X
+    valor: 500
+    mensagem: "Mensagem de teste"
   profiles:
     active: DEVELOPMENT_CURSOS

@@ -3,10 +3,12 @@ package arquiteturaspring;
 import org.springframework.boot.Banner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
 
 @SpringBootApplication
+@EnableConfigurationProperties // denota que a aplicação irá utilizar classes de configuração com propriedades
 public class ArquiteturaspringApplication {
 
 	public static void main(String[] args) {
@@ -33,6 +35,8 @@ public class ArquiteturaspringApplication {
 		// exemplo de uso do @Value para injetar valores de configuração do arquivo application.yml
 		applicationContext.getBean(ExemploValue.class).imprimirVariavel();
 
+		System.out.println(applicationContext.getBean(AppProperties.class).getValor()); 
+		System.out.println(applicationContext.getBean(AppProperties.class).getMensagem()); 
 	}
 
 }
