@@ -29,6 +29,10 @@ public class ArquiteturaspringApplication {
 		ConfigurableEnvironment environment = applicationContext.getEnvironment();
 		String applicationName = environment.getProperty("spring.application.name");
 		System.out.println("Nome da aplicação: " + applicationName);
+
+		// exemplo de uso do @Value para injetar valores de configuração do arquivo application.yml
+		applicationContext.getBean(ExemploValue.class).imprimirVariavel();
+
 	}
 
 }

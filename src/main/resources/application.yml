@@ -1,0 +1,17 @@
+# O application.yml é um arquivo de configuração da aplicação Spring Boot
+# Usando para aplicações modernas, pois é fácil de ler.
+# o Spring Boot recomenda o uso do application.yml em vez do application.properties.
+
+spring:
+  application:
+    name: arquiteturaspring
+  jpa:
+    show-sql: true
+  main:
+    lazy-initialization: false
+
+app:
+  config:
+    variavel: VARIAVEL X
+  profiles:
+    active: DEVELOPMENT_CURSOS
