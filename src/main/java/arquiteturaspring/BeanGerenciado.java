@@ -1,12 +1,22 @@
 package arquiteturaspring;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import arquiteturaspring.todos.TodoEntity;
 import arquiteturaspring.todos.TodoValidator;
 
+/**
+* O Escopo padrão dos beans é singleton, ou seja, uma única instância do bean é criada e compartilhada em toda a aplicação
+* @Scope("singleton") // @Scope é para Definir o escopo manualmente como singleton
+* @Scope ("request") // Denota que o bean é gerenciado pelo Spring e terá escopo request
+* @Scope ("session") // Denota que o bean é gerenciado pelo Spring e terá escopo session
+* @Scope("prototype") // Denota que o bean é gerenciado pelo Spring e terá escopo prototype
+* @Scope("application") // Denota que o bean é gerenciado pelo Spring e terá escopo application
+*/
 @Component
+@Scope("singleton")
 public class BeanGerenciado {
 
     @Autowired
